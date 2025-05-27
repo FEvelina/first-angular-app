@@ -1,0 +1,10 @@
+<article>
+  <h2>{{ userTask?.title }}</h2>
+  <time>{{ userTask?.dueDate }}</time>
+  <p>{{ userTask?.summary }}</p>
+
+  <!-- bind the signal and event in the task html, tasks html and task ts -->
+  <p class="action">
+    <button (onclick)="onSelectCompletTask(userTask?.id)">Completed</button>
+  </p>
+</article>
