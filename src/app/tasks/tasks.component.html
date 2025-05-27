@@ -1,11 +1,17 @@
-<div id="task">
+<section id="task">
   <header>
     <h2>{{ name }}'s Tasks</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="onStartAddTask(addNewTaskCompActive!)">Add Task</button>
     </menu>
   </header>
   <!-- events yay -->
+  @if(addNewTaskCompActive){
+  <menu>
+    <app-new-task [userId]="userId" [addButtonActive]="addNewTaskCompActive" />
+  </menu>
+  }
+
   <ul>
     @for(task of selectedUserTasks; track task.id ) {
 
@@ -14,4 +20,4 @@
     </li>
     }
   </ul>
-</div>
+</section>
