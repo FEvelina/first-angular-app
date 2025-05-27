@@ -46,6 +46,6 @@ export class TasksComponent {
   //this method is for when the use COMPLETES a TASK
   onSelectCompletTask(id: string) {
     console.log(id);
-    console.log('in tasks.component.ts file onSelectCompleteTask');
+    this.dummyTasks = this.dummyTasks.filter((task) => task.id !== id);
   }
 }
