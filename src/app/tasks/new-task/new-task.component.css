@@ -1,0 +1,52 @@
+.backdrop {
+  opacity: 0.1;
+}
+
+dialog {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1rem auto 2rem;
+  height: 620px;
+  width: 650px;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #25113d;
+  color: #decdf2;
+  overflow: hidden;
+  border: solid red;
+  border-radius: 8px;
+}
+
+form {
+  width: 100%;
+  border: solid yellow;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  border: solid yellow;
+}
+
+input,
+textarea {
+  background-color: #bf9ee5;
+  font: inherit;
+  border: solid blue;
+  border-radius: 6px;
+  height: 2.5rem;
+}
+
+textarea {
+  height: 11rem;
+}
+
+button {
+  padding: 0.5rem 1.7rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #9965dd;
+  font: inherit;
+}
