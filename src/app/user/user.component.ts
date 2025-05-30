@@ -1,17 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { User } from './user.model';
+import { type User } from './user.model';
+import { CardComponent } from '../shared/card/card.component';
 
 //Input= decorator; input= special function, it's a signal input
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
 })
 export class UserComponent {
   //the decorator approach
   @Input({ required: true }) user!: User;
-
+  @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter<string>();
 
   //keep in mind, this are SIGNALS!!!!
