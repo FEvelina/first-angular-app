@@ -1,10 +1,10 @@
-<article>
-  <h2>{{ userTask?.title }}</h2>
-  <time>{{ userTask?.dueDate }}</time>
-  <p>{{ userTask?.summary }}</p>
-
-  <!-- bind the signal and event in the task html, tasks html and task ts -->
-  <p class="action">
-    <button (click)="onSelectCompletTask()">Completed</button>
-  </p>
-</article>
+<app-card>
+  <article>
+    <h2>{{ userTask.title }}</h2>
+    <time>{{ userTask.dueDate | date : "fullDate" }}</time>
+    <p>{{ userTask.summary }}</p>
+    <p class="action">
+      <button (click)="onSelectCompletTask()">Completed</button>
+    </p>
+  </article>
+</app-card>
